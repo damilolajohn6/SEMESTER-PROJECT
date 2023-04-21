@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <title>Hotels Ng</title>
+  </head>
+
+  <body>
+    <nav class="nav container-fluid">
+      <div class="nav-logo">
+        <h1 class="nav-header">hotels.ng</h1>
+      </div>
+
+      <ul class="nav-list">
+        <li>
+          <a href="#"><i class="fa fab fa-whatsapp"></i></a>
+        </li>
+        <li class="nav-item">
+          <img
+            src="img/hotels-ng/navbar-contact.jpg"
+            class="nav-contact"
+            alt="contact"
+          />
+        </li>
+        <li>
+          <div class="nav-icon-flag">
+            <i class="fa fas fa-flag"></i>
+            <span class="v7-naira-sign" style="padding-left: 4px">₦</span>
+            <span><i class="fa fas fa-circle-chevron-down"></i></span>
+          </div>
+        </li>
+        <li>
+          <div class="nav-icon-user">
+            <img
+              alt=""
+              src="https://static.hotels.ng/v7/img/default.svg"
+              style="width: 32px; height: 35px"
+            />
+            <div class="dropdown">
+              <button onclick="showDropdown()" class="dropbtn">Account</button>
+              <div id="myDropdown" class="dropdown-content">
+                <p class="dropdown-content-desc">
+                  Sign in to access exclusive<br />member deals
+                </p>
+                <a class="dropdown-content-link">Sign in</a>
+                <p class="dropdown-content-signup">
+                  New here?
+                  <span><a href="#" class="btn-signup">Sign up</a></span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="hero">
+      <div class="overlay">
+        <div class="hero-text-box">
+          <h1 class="hero-header">Find and book hotels in Nigeria.</h1>
+          <p class="hero-paragraph">Search through 13,170 hotels in Nigeria</p>
+        </div>
+      </div>
+
+      <div class="hero-form">
+        <!-- <div id="sticky"> -->
+        <form class="form" id="search-form">
+          <div class="form-group">
+            <input
+              type="search"
+              class="form-input"
+              placeholder="search for a city or a particular hotel"
+              id="search-input"
+            />
+            <!-- <i class="fa fab fa"></i> -->
+          </div>
+
+          <div class="form-group">
+            <input type="date" class="form-input" />
+          </div>
+
+          <div class="form-group">
+            <button class="form-btn">Find Hotels</button>
+          </div>
+        </form>
+        <!-- </div> -->
+      </div>
+    </section>
+
+    <!-- Suggested Destinations in Nigeria -->
+    <section class="destination section-heading">
+      <div class="destination-text-box">
+        <h2 class="destination-heading">Suggested Destinations in Nigeria</h2>
+        <p class="destination-paragraph">
+          Below are the most popular travel destinations in Nigeria
+        </p>
+        <div class="destination-divider"></div>
+      </div>
+
+      <div class="destination-container-cards">
+        <div class="card">
+          <h3 class="card-header">Hotels in<br />Lagos</h3>
+          <p class="card-caption">3,421 hotels</p>
+        </div>
+        <div class="card">
+          <h3 class="card-header">Hotels in <br />Abuja</h3>
+          <p class="card-caption">1,157 hotels</p>
+        </div>
+        <div class="card">
+          <h3 class="card-header">Hotels in <br />Port Harcourt</h3>
+          <p class="card-caption">391 hotels</p>
+        </div>
+        <div class="card">
+          <h3 class="card-header">Hotels in <br />Kaduna</h3>
+          <p class="card-caption">330 hotels</p>
+        </div>
+        <div class="card">
+          <h3 class="card-header">Hotels in <br />Uyo</h3>
+          <p class="card-caption">202 hotels</p>
+        </div>
+        <div class="card">
+          <h3 class="card-header">Hotels in <br />Ibadan</h3>
+          <p class="card-caption">444 hotels</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOP HOTEL SECTION -->
+    <section class="top-hotels" style="text-align: center">
+      <div class="destination-text-box">
+        <h2 class="destination-heading">Today's Top Hotel Deals</h2>
+        <p class="destination-paragraph">
+          A selection of the best hotel deals, only available today
+        </p>
+        <div class="destination-divider"></div>
+      </div>
+
+      <!-- Cards -->
+      <div class="rows">
+        <div class="top-hotels-card">
+          <img
+            src="img/hotels-ng/img-1.jpg"
+            class="top-hotels-img"
+            alt="photo"
+          />
+          <div class="card-details">
+            <h3 class="top-hotels-title">Kittex Place</h3>
+            <p class="top-hotels-caption">Lekki-Phase-1, Lagos</p>
+          </div>
+          <div class="card-discount">
+            <div>
+              <p class="listing">Up to <span>27%</span> off</p>
+            </div>
+            <div class="card-slant"></div>
+          </div>
+        </div>
+
+        <div class="top-hotels-card">
+          <img
+            src="img/hotels-ng/img-2.jpg"
+            class="top-hotels-img"
+            alt="photo"
+          />
+          <div class="card-details">
+            <h3 class="top-hotels-title">The Avenue Suites</h3>
+            <p class="top-hotels-caption">victoria-island, Lagos</p>
+          </div>
+          <div class="card-discount">
+            <div>
+              <p class="listing">Up to <span>19%</span> off</p>
+            </div>
+            <div class="card-slant"></div>
+          </div>
+        </div>
+
+        <div class="top-hotels-card">
+          <img
+            src="img/hotels-ng/img-3.jpg"
+            class="top-hotels-img"
+            alt="photo"
+          />
+          <div class="card-details">
+            <h3 class="top-hotels-title">Marmaris Hotels And Suites ...</h3>
+            <p class="top-hotels-caption">Owerri, Imo</p>
+          </div>
+          <div class="card-discount">
+            <div>
+              <p class="listing">Up to <span>22%</span> off</p>
+            </div>
+            <div class="card-slant"></div>
+          </div>
+        </div>
+      </div>
+      <div class="rows rows--2">
+        <div class="top-hotels-card">
+          <img
+            src="img/hotels-ng/img-4.jpg"
+            class="top-hotels-img"
+            alt="photo"
+          />
+          <div class="card-details">
+            <h3 class="top-hotels-title">E Gold Maitama</h3>
+            <p class="top-hotels-caption">Maitama, Abuja</p>
+          </div>
+          <div class="card-discount">
+            <div>
+              <p class="listing">Up to <span>27%</span> off</p>
+            </div>
+            <div class="card-slant"></div>
+          </div>
+        </div>
+
+        <div class="top-hotels-card">
+          <img
+            src="img/hotels-ng/img-2.jpg"
+            class="top-hotels-img"
+            alt="photo"
+          />
+          <div class="card-details">
+            <h3 class="top-hotels-title">Dallas Grand Beach...</h3>
+            <p class="top-hotels-caption">Oghara, delta</p>
+          </div>
+          <div class="card-discount">
+            <div>
+              <p class="listing">Up to <span>19%</span> off</p>
+            </div>
+            <div class="card-slant"></div>
+          </div>
+        </div>
+
+        <div class="top-hotels-card">
+          <img
+            src="img/hotels-ng/img-3.jpg"
+            class="top-hotels-img"
+            alt="photo"
+          />
+          <div class="card-details">
+            <h3 class="top-hotels-title">The Agore Hotels Ltd</h3>
+            <p class="top-hotels-caption">Ibeju Lekki, Lagos</p>
+          </div>
+          <div class="card-discount">
+            <div>
+              <p class="listing">Up to <span>22%</span> off</p>
+            </div>
+            <div class="card-slant"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- POPULAR CITIES -->
+    <section class="cities">
+      <div
+        class="destination-text-box"
+        style="text-align: center; padding-top: 5rem"
+      >
+        <h2 class="destination-heading">
+          Popular cities with Hotels.ng travellers
+        </h2>
+        <p class="destination-paragraph">
+          See the top destinations people are traveling to
+        </p>
+        <div class="destination-divider"></div>
+      </div>
+
+      <div class="rows">
+        <div class="cities-card">
+          <img
+            src="img/hotels-ng/city-1.jpg"
+            class="cities-card--img"
+            alt="photo"
+          />
+          <div class="card-details">
+            <p>3,421</p>
+            <h3>Lagos hotels</h3>
+          </div>
+          <div class="card-layer">
+            <a href="" class="card-cta">Book Hotels in Lagos</a>
+          </div>
+        </div>
+
+        <div class="cities-card">
+          <img
+            src="img/hotels-ng/city-1.jpg"
+            class="cities-card--img"
+            alt="photo"
+          />
+          <div class="card-details">
+            <p>1,157</p>
+            <h3>Abuha hotels</h3>
+          </div>
+          <div class="card-layer">
+            <a href="" class="card-cta">Book Hotels in Abuja</a>
+          </div>
+        </div>
+
+        <div class="cities-card">
+          <img
+            src="img/hotels-ng/city-1.jpg"
+            class="cities-card--img"
+            alt="photo"
+          />
+          <div class="card-details">
+            <p>276</p>
+            <h3>Calabar hotels</h3>
+          </div>
+          <div class="card-layer">
+            <a href="" class="card-cta">Book Hotels in Calabar</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="rows" style="margin-top: 3rem">
+        <div class="cities-card">
+          <img
+            src="img/hotels-ng/city-1.jpg"
+            class="cities-card--img"
+            alt="photo"
+          />
+          <div class="card-details">
+            <p>391</p>
+            <h3>PortHarcourt hotels</h3>
+          </div>
+          <div class="card-layer">
+            <a href="" class="card-cta">Book Hotels in PortHarcourt</a>
+          </div>
+        </div>
+
+        <div class="cities-card">
+          <img
+            src="img/hotels-ng/city-1.jpg"
+            class="cities-card--img"
+            alt="photo"
+          />
+          <div class="card-details">
+            <p>188</p>
+            <h3>Owerri hotels</h3>
+          </div>
+          <div class="card-layer">
+            <a href="" class="card-cta">Book Hotels in Owerri</a>
+          </div>
+        </div>
+
+        <div class="cities-card">
+          <img
+            src="img/hotels-ng/city-1.jpg"
+            class="cities-card--img"
+            alt="photo"
+          />
+          <div class="card-details">
+            <p>202</p>
+            <h3>Uyo hotels</h3>
+          </div>
+          <div class="card-layer">
+            <a href="" class="card-cta">Book Hotels in Uyo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Which City Do You Want To Book A Hotel ? -->
+    <section class="book-hotels">
+      <div class="destination-text-box" style="text-align: center">
+        <h2 class="destination-heading">
+          Which City Do You Want To Book A Hotel ?
+        </h2>
+        <p class="destination-paragraph">
+          See the top destinations people are traveling to
+        </p>
+        <div class="destination-divider"></div>
+      </div>
+
+      <div class="rows">
+        <div class="book-hotels-card">
+          <a href="#">
+            <h3 class="card-header">Hotels in Abia</h3>
+          </a>
+          <p class="card-caption">295 hotels in Abia with</p>
+          <p class="card-caption">over 171 hotel reviews</p>
+        </div>
+        <div class="book-hotels-card">
+          <h3 class="card-header">Hotels in Abuja</h3>
+          <p class="card-caption">1,157 hotels in Abuja with over</p>
+          <p class="card-caption">2,445 hotel reviews</p>
+        </div>
+        <div class="book-hotels-card">
+          <h3 class="card-header">Hotels in Abia</h3>
+          <p class="card-caption">295 hotels in Abia with</p>
+          <p class="card-caption">over 171 hotel reviews</p>
+        </div>
+        <div class="book-hotels-card">
+          <h3 class="card-header">Hotels in Abia</h3>
+          <p class="card-caption">295 hotels in Abia with</p>
+          <p class="card-caption">over 171 hotel reviews</p>
+        </div>
+        <div class="book-hotels-card">
+          <h3 class="card-header">Hotels in Abia</h3>
+          <p class="card-caption">295 hotels in Abia with</p>
+          <p class="card-caption">over 171 hotel reviews</p>
+        </div>
+      </div>
+
+      <div class="rows">
+        <div class="book-hotels-card">
+          <h3 class="card-header">Hotels in Abia</h3>
+          <p class="card-caption">295 hotels in Abia with</p>
+          <p class="card-caption">over 171 hotel reviews</p>
+        </div>
+        <div class="book-hotels-card">
+          <h3 class="card-header">Hotels in Abia</h3>
+          <p class="card-caption">295 hotels in Abia with</p>
+          <p class="card-caption">over 171 hotel reviews</p>
+        </div>
+        <div class="book-hotels-card">
+          <h3 class="card-header">Hotels in Abia</h3>
+          <p class="card-caption">295 hotels in Abia with</p>
+          <p class="card-caption">over 171 hotel reviews</p>
+        </div>
+        <div class="book-hotels-card">
+          <h3 class="card-header">Hotels in Abia</h3>
+          <p class="card-caption">295 hotels in Abia with</p>
+          <p class="card-caption">over 171 hotel reviews</p>
+        </div>
+        <div class="book-hotels-card">
+          <h3 class="card-header">Hotels in Abia</h3>
+          <p class="card-caption">295 hotels in Abia with</p>
+          <p class="card-caption">over 171 hotel reviews</p>
+        </div>
+      </div>
+
+      <div class="rows">
+        <div class="book-hotels-card">
+          <h3 class="card-header">Hotels in Abia</h3>
+          <p class="card-caption">295 hotels in Abia with</p>
+          <p class="card-caption">over 171 hotel reviews</p>
+        </div>
+        <div class="book-hotels-card">
+          <h3 class="card-header">Hotels in Abia</h3>
+          <p class="card-caption">295 hotels in Abia with</p>
+          <p class="card-caption">over 171 hotel reviews</p>
+        </div>
+        <div class="book-hotels-card">
+          <h3 class="card-header">Hotels in Abia</h3>
+          <p class="card-caption">295 hotels in Abia with</p>
+          <p class="card-caption">over 171 hotel reviews</p>
+        </div>
+        <div class="book-hotels-card">
+          <h3 class="card-header">Hotels in Abia</h3>
+          <p class="card-caption">295 hotels in Abia with</p>
+          <p class="card-caption">over 171 hotel reviews</p>
+        </div>
+        <div class="book-hotels-card">
+          <h3 class="card-header">Hotels in Abia</h3>
+          <p class="card-caption">295 hotels in Abia with</p>
+          <p class="card-caption">over 171 hotel reviews</p>
+        </div>
+      </div>
+
+      <div class="rows">
+        <div class="book-hotels-card">
+          <h3 class="card-header">Hotels in Abia</h3>
+          <p class="card-caption">295 hotels in Abia with</p>
+          <p class="card-caption">over 171 hotel reviews</p>
+        </div>
+        <div class="book-hotels-card">
+          <h3 class="card-header">Hotels in Abia</h3>
+          <p class="card-caption">295 hotels in Abia with</p>
+          <p class="card-caption">over 171 hotel reviews</p>
+        </div>
+        <div class="book-hotels-card">
+          <h3 class="card-header">Hotels in Abia</h3>
+          <p class="card-caption">295 hotels in Abia with</p>
+          <p class="card-caption">over 171 hotel reviews</p>
+        </div>
+        <div class="book-hotels-card">
+          <h3 class="card-header">Hotels in Abia</h3>
+          <p class="card-caption">295 hotels in Abia with</p>
+          <p class="card-caption">over 171 hotel reviews</p>
+        </div>
+        <div class="book-hotels-card">
+          <h3 class="card-header">Hotels in Abia</h3>
+          <p class="card-caption">295 hotels in Abia with</p>
+          <p class="card-caption">over 171 hotel reviews</p>
+        </div>
+      </div>
+
+      <div class="rows">
+        <div class="book-hotels-card">
+          <h3 class="card-header">Hotels in Abia</h3>
+          <p class="card-caption">295 hotels in Abia with</p>
+          <p class="card-caption">over 171 hotel reviews</p>
+        </div>
+        <div class="book-hotels-card">
+          <h3 class="card-header">Hotels in Abia</h3>
+          <p class="card-caption">295 hotels in Abia with</p>
+          <p class="card-caption">over 171 hotel reviews</p>
+        </div>
+        <div class="book-hotels-card">
+          <h3 class="card-header">Hotels in Abia</h3>
+          <p class="card-caption">295 hotels in Abia with</p>
+          <p class="card-caption">over 171 hotel reviews</p>
+        </div>
+        <div class="book-hotels-card">
+          <h3 class="card-header">Hotels in Abia</h3>
+          <p class="card-caption">295 hotels in Abia with</p>
+          <p class="card-caption">over 171 hotel reviews</p>
+        </div>
+        <div class="book-hotels-card">
+          <h3 class="card-header">Hotels in Abia</h3>
+          <p class="card-caption">295 hotels in Abia with</p>
+          <p class="card-caption">over 171 hotel reviews</p>
+        </div>
+      </div>
+
+      <div class="rows">
+        <div class="book-hotels-card">
+          <h3 class="card-header">Hotels in Abia</h3>
+          <p class="card-caption">295 hotels in Abia with</p>
+          <p class="card-caption">over 171 hotel reviews</p>
+        </div>
+        <div class="book-hotels-card">
+          <h3 class="card-header">Hotels in Abia</h3>
+          <p class="card-caption">295 hotels in Abia with</p>
+          <p class="card-caption">over 171 hotel reviews</p>
+        </div>
+        <div class="book-hotels-card">
+          <h3 class="card-header">Hotels in Abia</h3>
+          <p class="card-caption">295 hotels in Abia with</p>
+          <p class="card-caption">over 171 hotel reviews</p>
+        </div>
+        <div class="book-hotels-card">
+          <h3 class="card-header">Hotels in Abia</h3>
+          <p class="card-caption">295 hotels in Abia with</p>
+          <p class="card-caption">over 171 hotel reviews</p>
+        </div>
+        <div class="book-hotels-card">
+          <h3 class="card-header">Hotels in Abia</h3>
+          <p class="card-caption">295 hotels in Abia with</p>
+          <p class="card-caption">over 171 hotel reviews</p>
+        </div>
+      </div>
+
+      <div class="rows">
+        <div class="book-hotels-card">
+          <h3 class="card-header">Hotels in Abia</h3>
+          <p class="card-caption">295 hotels in Abia with</p>
+          <p class="card-caption">over 171 hotel reviews</p>
+        </div>
+        <div class="book-hotels-card">
+          <h3 class="card-header">Hotels in Abia</h3>
+          <p class="card-caption">295 hotels in Abia with</p>
+          <p class="card-caption">over 171 hotel reviews</p>
+        </div>
+        <div class="book-hotels-card">
+          <h3 class="card-header">Hotels in Abia</h3>
+          <p class="card-caption">295 hotels in Abia with</p>
+          <p class="card-caption">over 171 hotel reviews</p>
+        </div>
+        <div class="book-hotels-card">
+          <h3 class="card-header">Hotels in Abia</h3>
+          <p class="card-caption">295 hotels in Abia with</p>
+          <p class="card-caption">over 171 hotel reviews</p>
+        </div>
+        <div class="book-hotels-card">
+          <h3 class="card-header">Hotels in Abia</h3>
+          <p class="card-caption">295 hotels in Abia with</p>
+          <p class="card-caption">over 171 hotel reviews</p>
+        </div>
+      </div>
+
+      <div class="rows rows--8">
+        <div class="book-hotels-card">
+          <h3 class="card-header">Hotels in Abia</h3>
+          <p class="card-caption">295 hotels in Abia with</p>
+          <p class="card-caption">over 171 hotel reviews</p>
+        </div>
+        <div class="book-hotels-card">
+          <h3 class="card-header">Hotels in Abia</h3>
+          <p class="card-caption">295 hotels in Abia with</p>
+          <p class="card-caption">over 171 hotel reviews</p>
+        </div>
+        <div class="book-hotels-card">
+          <h3 class="card-header">Hotels in Abia</h3>
+          <p class="card-caption">295 hotels in Abia with</p>
+          <p class="card-caption">over 171 hotel reviews</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Special Hotel Deals and Offers -->
+
+    <section class="special-deals">
+      <h2 class="special-deals-header">Special Hotel Deals and Offers</h2>
+      <p class="special-deals-paragraph">
+        Enter your email address to receive secret hotel deals
+      </p>
+      <div>
+        <form class="special-deals-form">
+          <input
+            type="email"
+            class="form-input"
+            placeholder="Enter your email address"
+          />
+          <button class="form-btn">Suscribe</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- We've been featured in -->
+    <section class="feature">
+      <div class="destination-text-box" style="text-align: center">
+        <h2 class="destination-heading">We've been featured in</h2>
+        <div class="destination-divider"></div>
+      </div>
+
+      <div class="feature-row">
+        <div class="feature-col">
+          <img src="img/icon-svg/bbc.svg" alt="" />
+        </div>
+
+        <div class="feature-col">
+          <img src="img/icon-svg/forbes.svg" alt="" />
+          <!-- <img src="img/hotels-ng/hotels-ng.svg" alt=""> -->
+        </div>
+
+        <div class="feature-col">
+          <img src="img/icon-svg/news.svg" alt="" />
+        </div>
+
+        <div class="feature-col">
+          <img src="img/icon-svg/web.svg" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Get More Bookings for Your Hotel -->
+    <section class="bookings">
+      <div class="destination-text-box" style="text-align: center">
+        <h2 class="destination-heading">Get More Bookings for Your Hotel</h2>
+        <p class="destination-paragraph" style="margin-top: 1.5rem">
+          Find out why over 13,170 hotel managers trust Hotels.ng
+        </p>
+
+        <button class="form-btn" style="margin-top: 2rem">
+          Add Your Hotels
+        </button>
+      </div>
+    </section>
+
+    <!-- Get the Hotels.ng app -->
+    <section class="get-app">
+      <div class="get-app-row">
+        <div class="get-app-col">
+          <img src="img/hotels-ng/get-app.png" alt="" />
+        </div>
+
+        <div class="get-app-col">
+          <h1 class="get-app-header">Get the<br />Hotels.ng app</h1>
+          <h3>
+            Download the hotels.ng app and book<br />
+            a hotel instantly
+          </h3>
+          <p>Book your hotel instantly with our Android App.</p>
+          <img
+            src="img/hotels-ng/google-play.png"
+            class="get-app-img"
+            style="margin-top: 2rem"
+            alt="playstore"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Enter your email address to unlock hotel deals -->
+    <section class="notification text-center container-fluid">
+      <div class="row">
+        <div class="notification-col">
+          <h3>Enter your email address to unlock hotel deals</h3>
+          <p>Sign up to start receiving exclusive offers</p>
+        </div>
+
+        <div class="notification-form">
+          <form>
+            <input
+              type="email"
+              class="notification-input"
+              placeholder="Enter your email address"
+            />
+            <input
+              type="button"
+              class="form-btn notification-btn"
+              value="unlock"
+            />
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="row container">
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul class="footer-list">
+            <li class="footer-items">
+              <a href="#" class="footer-link">Visa</a>
+            </li>
+            <li class="footer-items">
+              <a href="#" class="footer-link">Blog</a>
+            </li>
+            <li class="footer-items">
+              <a href="#" class="footer-link">About Us</a>
+            </li>
+            <li class="footer-items">
+              <a href="#" class="footer-link">Press page</a>
+            </li>
+            <li class="footer-items">
+              <a href="#" class="footer-link">Job Openinigs</a>
+            </li>
+            <li class="footer-items">
+              <a href="#" class="footer-link">Privacy Policy</a>
+            </li>
+            <li class="footer-items">
+              <a href="#" class="footer-link">Terms of Service</a>
+            </li>
+            <li class="footer-items">
+              <a href="#" class="footer-link">How it Works</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Community</h4>
+          <ul class="footer-list">
+            <li class="footer-items">
+              <a href="#" class="footer-link">Visa</a>
+            </li>
+            <li class="footer-items">
+              <a href="#" class="footer-link">Blog</a>
+            </li>
+            <li class="footer-items">
+              <a href="#" class="footer-link">About Us</a>
+            </li>
+            <li class="footer-items">
+              <a href="#" class="footer-link">Press page</a>
+            </li>
+            <li class="footer-items">
+              <a href="#" class="footer-link">Job Openinigs</a>
+            </li>
+            <li class="footer-items">
+              <a href="#" class="footer-link">Privacy Policy</a>
+            </li>
+            <li class="footer-items">
+              <a href="#" class="footer-link">Terms of Service</a>
+            </li>
+            <li class="footer-items">
+              <a href="#" class="footer-link">How it Works</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Top Cities</h4>
+          <ul class="footer-list">
+            <li class="footer-items">
+              <a href="#" class="footer-link">Visa</a>
+            </li>
+            <li class="footer-items">
+              <a href="#" class="footer-link">Blog</a>
+            </li>
+            <li class="footer-items">
+              <a href="#" class="footer-link">About Us</a>
+            </li>
+            <li class="footer-items">
+              <a href="#" class="footer-link">Press page</a>
+            </li>
+            <li class="footer-items">
+              <a href="#" class="footer-link">Job Openinigs</a>
+            </li>
+            <li class="footer-items">
+              <a href="#" class="footer-link">Privacy Policy</a>
+            </li>
+            <li class="footer-items">
+              <a href="#" class="footer-link">Terms of Service</a>
+            </li>
+            <li class="footer-items">
+              <a href="#" class="footer-link">How it Works</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Top Destinations</h4>
+          <ul class="footer-list">
+            <li class="footer-items">
+              <a href="#" class="footer-link">Hotels in Lagos</a>
+            </li>
+            <li class="footer-items">
+              <a href="#" class="footer-link">Blog</a>
+            </li>
+            <li class="footer-items">
+              <a href="#" class="footer-link">About Us</a>
+            </li>
+            <li class="footer-items">
+              <a href="#" class="footer-link">Press page</a>
+            </li>
+            <li class="footer-items">
+              <a href="#" class="footer-link">Job Openinigs</a>
+            </li>
+            <li class="footer-items">
+              <a href="#" class="footer-link">Privacy Policy</a>
+            </li>
+            <li class="footer-items">
+              <a href="#" class="footer-link">Terms of Service</a>
+            </li>
+            <li class="footer-items">
+              <a href="#" class="footer-link">How it Works</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Top Hotels</h4>
+          <ul class="footer-list">
+            <li class="footer-items">
+              <a href="#" class="footer-link">Visa</a>
+            </li>
+            <li class="footer-items">
+              <a href="#" class="footer-link">Blog</a>
+            </li>
+            <li class="footer-items">
+              <a href="#" class="footer-link">About Us</a>
+            </li>
+            <li class="footer-items">
+              <a href="#" class="footer-link">Press page</a>
+            </li>
+            <li class="footer-items">
+              <a href="#" class="footer-link">Job Openinigs</a>
+            </li>
+            <li class="footer-items">
+              <a href="#" class="footer-link">Privacy Policy</a>
+            </li>
+            <li class="footer-items">
+              <a href="#" class="footer-link">Terms of Service</a>
+            </li>
+            <li class="footer-items">
+              <a href="#" class="footer-link">How it Works</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
