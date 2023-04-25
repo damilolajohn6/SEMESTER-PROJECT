@@ -7,7 +7,6 @@ function showDropdown() {
   }
 }
 
-// Close the dropdown if the user clicks outside of it
 window.onclick = function (event) {
   if (!event.target.matches(".dropbtn")) {
     var dropdown = document.getElementById("myDropdown");
@@ -17,14 +16,12 @@ window.onclick = function (event) {
   }
 };
 
-// Search query
 const form = document.querySelector("#search-form");
 const searchInput = document.querySelector("#search-input");
 
 form.addEventListener("submit", function (event) {
-  event.preventDefault(); // prevent the form from submitting
+  event.preventDefault();
 
   const searchQuery = searchInput.value;
   window.location.href = "https://hotels.ng/hotels-in-" + searchQuery;
-  // searchInput.value = "";
 });
